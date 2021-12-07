@@ -1,0 +1,34 @@
+.allicons{
+    width: 100%;
+    height: 45%;
+    background-color: rgb(146, 146, 146);
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+.icons{
+    background-color: rgb(146, 146, 146);
+    width: 50%;
+    height: 45%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+.btnIcons{
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    /* background-color: #1b5899; */
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+.btnIcons:hover{
+    color: black;
+    transform: scale(1.5);
+}
