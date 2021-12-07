@@ -1,10 +1,10 @@
 import './Select.css'
 import React from "react";
-export const Select = ({data}) => {
+export const Select = ({data, event}) => {
 
     return(
         <>
-        <select name="option" id="select">
+        <select name="option" id="select" onChange={event}>
             <option value="one">Select a character</option>
             <option value="all">Select all characters</option>
             {

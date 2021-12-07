@@ -9,18 +9,34 @@ export const Main = () =>{
         FetchApi('');
     },[]);
     const [datas, setData] = useState([{name: "Morty",image:morty}]);
+    const [name, setName] = useState("Mory");
 
     const URL = 'https://rickandmortyapi.com/api/character/'
 
     const FetchApi=()=> {    
         fetch(URL)
         .then(response=>response.json())
-        .then(data=>setData(data.results))
+        .then(data=>{
+            setData(data.results)
+            setName(data.results.name)
+        });
     }
+
+    const setEvent= ((event)=>{
+        if(event.target.value === 'one'){
+            setData([])
+        }
+        if(event.target.value === 'all'){
+            
+        }
+    });
+
     return(
         <>
             <main>
-            <Select data={datas} />
+                <div className="containerSelect">
+                    <Select data={datas} event={setEvent} /> 
+                </div>
                 <section>
                     <Card data={datas}/>
                 </section>
