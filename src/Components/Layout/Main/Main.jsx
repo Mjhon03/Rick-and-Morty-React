@@ -9,36 +9,49 @@ export const Main = () =>{
         FetchApi('');
     },[]);
     const [datas, setData] = useState([{name: "Morty",image:morty}]);
-    const [name, setName] = useState("Mory");
+    const [datos, setDatos] = useState([{name: "Morty",image:morty}]);
+    const [name, setName] = useState([{id:1,name:"Morty",image:morty}]);
+    const URL = 'https://rickandmortyapi.com/api/character/?name='
 
-    const URL = 'https://rickandmortyapi.com/api/character/'
-
-    const FetchApi=()=> {    
+    const FetchApi=(()=>{
         fetch(URL)
         .then(response=>response.json())
         .then(data=>{
             setData(data.results)
-            setName(data.results.name)
+            setName(data.results)
+            setDatos([])
         });
-    }
+    })    
 
-    const setEvent= ((event)=>{
+    const sedEvent=((event)=>{
         if(event.target.value === 'one'){
-            setData([])
-        }
+            setDatos([])
+            console.log(event.target);
+        }   
         if(event.target.value === 'all'){
-            
+            setDatos(datas)
         }
-    });
+        datas.map((element) =>{
+            if (event.target.value===element.name) {
+                setDatos([element])
+            }
+            return '';
+        })
+        
+    })
 
     return(
         <>
             <main>
                 <div className="containerSelect">
-                    <Select data={datas} event={setEvent} /> 
+                    <Select key="select" data={name} event={sedEvent} /> 
                 </div>
                 <section>
-                    <Card data={datas}/>
+                    <div className="totalcards">
+                    <div className="allcard">
+                        <Card key="card" data={datos}/>
+                    </div>
+                    </div>
                 </section>
             </main>
         </>

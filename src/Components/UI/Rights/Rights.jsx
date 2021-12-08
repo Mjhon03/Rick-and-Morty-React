@@ -3,7 +3,7 @@ import './Rights.css';
 export const Rights = () => {
     return(
         <>
-        <div class="allinfo">
+        <div className="allinfo">
             <div>
                 <h2>Jhon Maicol Montoya</h2>
             </div>

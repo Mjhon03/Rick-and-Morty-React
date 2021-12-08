@@ -11,7 +11,9 @@ export const Card = ({data})=>{
                 <>
                     <div className='cards'>
                     <img src={element.image} alt={element.name} className="cardImg" />
-                    <h2 className="cardName">{element.name}</h2>
+                    <div className="cardname">
+                        <h2 className="cardName">{element.name}</h2>
+                    </div>
                     </div>
                 </>
             ))

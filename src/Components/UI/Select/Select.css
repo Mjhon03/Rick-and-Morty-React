@@ -2,8 +2,12 @@ select{
     height: 30px;
     width:230px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     font-size: 20px;
     text-decoration: none;
     background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+option{
+    background-color:rgb(145, 145, 145);
 }
