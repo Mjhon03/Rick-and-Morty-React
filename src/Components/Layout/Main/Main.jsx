@@ -8,8 +8,8 @@ export const Main = () =>{
     useEffect(()=>{
         FetchApi('');
     },[]);
-    const [datas, setData] = useState([{name: "Morty",image:morty}]);
-    const [datos, setDatos] = useState([{name: "Morty",image:morty}]);
+    const [datas, setData] = useState([{id:0,name: "Morty",image:morty}]);
+    const [datos, setDatos] = useState([{id:0,name: "Morty",image:morty}]);
     const [name, setName] = useState([{id:1,name:"Morty",image:morty}]);
     const URL = 'https://rickandmortyapi.com/api/character/?name='
 
@@ -49,7 +49,7 @@ export const Main = () =>{
                 <section>
                     <div className="totalcards">
                     <div className="allcard">
-                        <Card key="card" data={datos}/>
+                        <Card key="Card" data={datos}/>
                     </div>
                     </div>
                 </section>

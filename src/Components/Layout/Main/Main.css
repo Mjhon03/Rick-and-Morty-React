@@ -1,8 +1,7 @@
 main{
-    min-height: 100vh;
+    min-height: 80vh;
     max-height: 100%;
     max-width: 100%;
-    /* background-color: rgb(235, 240, 243); */
     background-color: #333F44;
 }
 section{
