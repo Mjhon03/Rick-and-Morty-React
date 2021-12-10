@@ -1,12 +1,17 @@
 .cards{
     margin-right: 50px;
     margin-bottom: 50px;
-    background-color: #fff;
+    background: rgba(225, 225, 225, 0.1);
     height:370px ;
     width:350px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-radius: 15px;
+}
+.cards img{
+    transform: scale(0.9);
+    border-radius: 10px;
 }
 .cardname{
     height: 70px;
@@ -15,6 +20,8 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0px -3px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.75);
     z-index:1;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
 }
